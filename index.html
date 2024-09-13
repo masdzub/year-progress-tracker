@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
 
 <head>
     <meta charset="UTF-8">
@@ -16,34 +15,34 @@
 </head>
 
 <body class="transition-all duration-1000">
-    <div id="app" class="flex flex-col items-center justify-center min-h-screen">
+    <div id="app" class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 md:p-8">
         <!-- Title Section -->
-        <h1 class="font-extrabold tracking-tight drop-shadow-lg mb-6">
+        <h1 class="font-extrabold tracking-tight drop-shadow-lg mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             Year Progress Tracker
         </h1>
 
         <!-- Progress Container Section -->
-        <div class="card bg-white bg-opacity-90 rounded-xl shadow-2xl p-6 w-full max-w-3xl mx-auto border-4 border-gradient-to-r from-green-400 to-blue-500">
+        <div class="card bg-white bg-opacity-90 rounded-xl shadow-2xl p-4 sm:p-6 md:p-8 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto border-4 border-gradient-to-r from-green-400 to-blue-500">
             <!-- Year Progress and Percentage Section -->
-            <div class="flex items-center justify-between mb-6">
-                <p class="text-xl text-light font-semibold">Year Progress</p>
-                <p class="text-xl font-bold text-green-400">{{ yearProgress.toFixed(2) }}%</p>
+            <div class="flex flex-col sm:flex-row items-center justify-between mb-6">
+                <p class="text-lg sm:text-xl text-light font-semibold">Year Progress</p>
+                <p class="text-lg sm:text-xl font-bold text-green-400">{{ yearProgress.toFixed(2) }}%</p>
             </div>
 
             <!-- Progress Bar Section -->
-            <div class="progress-bar bg-gray-400 h-6 rounded-full overflow-hidden mb-8">
+            <div class="progress-bar bg-gray-400 h-4 sm:h-6 rounded-full overflow-hidden mb-8">
                 <div class="progress-bar-inner bg-green-500 h-full rounded-full" :style="{ width: yearProgress + '%', '--progress-width': yearProgress + '%' }"></div>
             </div>
 
             <!-- Date and Day of Year Section -->
-            <div class="flex items-center justify-between text-light mb-4">
-                <p class="text-lg font-medium">Day {{ dayOfYear }} of {{ daysInYear }}</p>
-                <p class="text-lg font-medium">Date: {{ currentDate }}</p>
+            <div class="flex flex-col sm:flex-row items-center justify-between text-light mb-4">
+                <p class="text-base sm:text-lg font-medium">Day {{ dayOfYear }} of {{ daysInYear }}</p>
+                <p class="text-base sm:text-lg font-medium">Date: {{ currentDate }}</p>
             </div>
         </div>
 
         <!-- Inspirational Text Section -->
-        <p class="inspirational-text mt-8">
+        <p class="inspirational-text mt-8 text-base sm:text-lg md:text-xl">
             Stay focused and keep moving forward!
         </p>
     </div>
